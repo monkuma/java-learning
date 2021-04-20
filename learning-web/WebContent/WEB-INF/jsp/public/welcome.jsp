@@ -12,5 +12,11 @@
 
 <h1>トップページです</h1>
 
+<form action="LoginServlet" method="post">
+ユーザーID：<input type="text" name="id"><br>
+パスワード：<input type="password" name="pass">
+<input type="submit" value="Login">
+</form>
+
 </body>
 </html>

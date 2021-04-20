@@ -1,23 +1,25 @@
 package model;
 
 public class Account {
-	private String userId;
 	private String pass;
 	private String name;
+	private String mail;
 
-	public Account(String userId, String pass, String name) {
-		this.userId = userId;
+	public Account(String name, String pass, String mail) {
+
 		this.pass = pass;
 		this.name = name;
+		this.mail = mail;
 	}
 
-	public String getUserId() {
-		return userId;
-	}
-	public String pass() {
+	public String getPass() {
 		return pass;
 	}
-	public String name() {
+	public String getName() {
 		return name;
+	}
+
+	public String getMail() {
+		return mail;
 	}
 }
