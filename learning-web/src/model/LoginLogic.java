@@ -3,10 +3,14 @@ import dao.AccountDAO;
 
 
 public class LoginLogic {
-	public boolean execute(Login login) {
+	public Account execute(Login login) {
 		AccountDAO dao = new AccountDAO();
 		Account account = dao.findByLogin(login);
-		return account != null;
+		if(account != null) {
+			return account;
+		}else {
+			return null;
+		}
 	}
 
 }

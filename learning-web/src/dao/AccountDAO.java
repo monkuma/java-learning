@@ -24,8 +24,6 @@ public class AccountDAO {
 			//JDBC ドライバの読み込み
 			Class.forName("org.mariadb.jdbc.Driver");
 
-			System.out.println(JDBC_URL);
-
 			//DB に接続
 			conn = DriverManager.getConnection( JDBC_URL, DB_USER, DB_PASS);
 
@@ -54,20 +52,18 @@ public class AccountDAO {
 		}
 	}
 
+	//Login処理をします
 	public Account findByLogin(Login login) {
 		Connection conn = createConnection();
 		Account account = null;
 
 		try {
 
-			String sql = "SELECT  mail, pass FROM account WHERE mail = ? AND pass = ?";
-
-			System.out.println(sql);
+			String sql = "SELECT * FROM account WHERE mail = ? AND pass = ?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, login.getMail());
 			pStmt.setString(2, login.getPass());
-			System.out.println(sql);
 
 			ResultSet rs = pStmt.executeQuery();
 
@@ -77,11 +73,47 @@ public class AccountDAO {
 				String mail = rs.getString("mail");
 				account = new Account(name, pass, mail);
 
+				System.out.println(name);
+
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
+		}finally{
+			closeConnection(conn);
 		}
-		closeConnection(conn);
+		return account;
+	}
+	
+
+	//会員登録します
+	public Account insertAccount(Login login) {
+		Connection conn = createConnection();
+		Account account = null;
+
+		try {
+
+			String sql = "SELECT * FROM account WHERE mail = ? AND pass = ?";
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, login.getMail());
+			pStmt.setString(2, login.getPass());
+
+			ResultSet rs = pStmt.executeQuery();
+
+			if(rs.next()) {
+				String name = rs.getString("name");
+				String pass = rs.getString("pass");
+				String mail = rs.getString("mail");
+				account = new Account(name, pass, mail);
+
+				System.out.println(name);
+
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally{
+			closeConnection(conn);
+		}
 		return account;
 	}
 }

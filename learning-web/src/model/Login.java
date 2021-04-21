@@ -8,7 +8,6 @@ public class Login {
 	public Login(String mail, String pass) {
 		this.mail = mail;
 		this.pass = pass;
-
 	}
 
 	public String getMail() {

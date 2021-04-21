@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.RequestDispatcher;
 import model.LoginLogic;
+import model.Account;
 import model.Login;
 /**
  * Servlet implementation class Login
@@ -29,6 +30,10 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/LoginForm.jsp");
+
+
+		dispatcher.forward(request, response);
 
 
 	}
@@ -37,25 +42,28 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
+
 		String mail = request.getParameter("id");
 		String pass = request.getParameter("pass");
 
 		Login login = new Login(mail, pass);
 		LoginLogic bo = new LoginLogic();
-		boolean result = bo.execute(login);
+		Account account = bo.execute(login);
 
 		RequestDispatcher dispatcher = null;
 
-		System.out.println(result + " " + mail + " " + pass);
 
-		if(result) { //Login成功
+		if(account != null) { //Login成功
 			HttpSession session = request.getSession();
-			session.setAttribute("mail", mail);
+			session.setAttribute("name", account.getName());
 
+			System.out.println("Login処理成功したのでmyPage.jspへフォワード");
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/myPage.jsp");
+
+
 		}else { //Login失敗
-			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
+			System.out.println("Login処理失敗したのでLoginForm.jspへフォワード");
+			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/LoginForm.jsp");
 		}
 
 		dispatcher.forward(request, response);
