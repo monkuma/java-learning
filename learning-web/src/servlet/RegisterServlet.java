@@ -8,20 +8,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Properties;
-import java.util.ResourceBundle;
-
+import model.Account;
+import model.RegisterLogic;
 /**
- * Servlet implementation class Main
+ * Servlet implementation class RegisterServlet
  */
-@WebServlet("/Main")
-public class WelcomeServlet extends HttpServlet {
+@WebServlet("/RegisterServlet")
+public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WelcomeServlet() {
+    public RegisterServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,7 +30,7 @@ public class WelcomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterForm.jsp");
 
 		dispatcher.forward(request, response);
 
@@ -41,8 +40,14 @@ public class WelcomeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String mail = request.getParameter("id");
+		String name = request.getParameter("name");
+		String pass = request.getParameter("pass");
+
+		RegisterLogic bo = new RegisterLogic();
+		Account account = new Account(name, pass, mail);
+		Account result = bo.execute(account);
+
 	}
 
 }

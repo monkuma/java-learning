@@ -17,6 +17,6 @@
 
     <div class="col-md-3 text-end">
       <button type="button" onclick="location.href='LoginServlet'" class="btn btn-outline-primary me-2">Login</button>
-      <button type="button" class="btn btn-primary">Sign-up</button>
+      <button type="button" onclick="location.href='RegisterServlet'" class="btn btn-primary">Sign-up</button>
     </div>
   </header>

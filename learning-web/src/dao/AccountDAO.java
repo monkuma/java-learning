@@ -83,10 +83,10 @@ public class AccountDAO {
 		}
 		return account;
 	}
-	
+
 
 	//会員登録します
-	public Account insertAccount(Login login) {
+	public Account insertAccount(Account account) {
 		Connection conn = createConnection();
 		Account account = null;
 
