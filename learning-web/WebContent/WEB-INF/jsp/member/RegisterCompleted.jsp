@@ -1,21 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="model.Account" %>
+<%
+String name = (String)session.getAttribute("name");
+%>
 <!DOCTYPE html>
-<html lang="jp">
+<html>
 <head>
 <jsp:include page="../commonMeta.jsp" />
-	<title>トップページです</title>
+<title>Insert title here</title>
 </head>
 <body>
 <div class="container">
-<jsp:include page="./public_header.jsp" />
-<h1>トップページです</h1>
-
+<h1>登録が完了しました！</h1>
+<h2><%= name %>さん</h2>
 
 </div>
 
 
-<jsp:include page="./public_footer.jsp" />
 
 
 </body>

@@ -73,7 +73,7 @@ public class AccountDAO {
 				String mail = rs.getString("mail");
 				account = new Account(name, pass, mail);
 
-				System.out.println(name);
+				System.out.println("findByLogin成功");
 
 			}
 		}catch(SQLException e) {
@@ -86,34 +86,53 @@ public class AccountDAO {
 
 
 	//会員登録します
-	public Account insertAccount(Account account) {
+	public boolean insertAccount(Account account) {
 		Connection conn = createConnection();
-		Account account = null;
 
 		try {
-
-			String sql = "SELECT * FROM account WHERE mail = ? AND pass = ?";
+			System.out.println("insertAccount実行");
+			System.out.println("name:  " + account.getName());
+			String sql = "INSERT INTO account (name, pass, mail) VALUES (?, ?, ?)";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
-			pStmt.setString(1, login.getMail());
-			pStmt.setString(2, login.getPass());
+			pStmt.setString(1, account.getName());
+			pStmt.setString(2, account.getPass());
+			pStmt.setString(3, account.getMail());
+
+			int rs = pStmt.executeUpdate();
+
+			if(rs != 0) {
+				return true;
+			}
+		}catch(SQLException e) {
+			System.out.println("insertAccount　失敗");
+			e.printStackTrace();
+		}finally{
+			closeConnection(conn);
+		}
+		return false;
+	}
+
+	//メールアドレスが使用済みか確認する
+	public Boolean registerCheck(String mail) {
+		Connection conn = createConnection();
+
+		try {
+			String sql = "SELECT * FROM account WHERE mail = ?";
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, mail);
 
 			ResultSet rs = pStmt.executeQuery();
 
 			if(rs.next()) {
-				String name = rs.getString("name");
-				String pass = rs.getString("pass");
-				String mail = rs.getString("mail");
-				account = new Account(name, pass, mail);
-
-				System.out.println(name);
-
+				return false;
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally{
 			closeConnection(conn);
 		}
-		return account;
+		return true;
 	}
 }

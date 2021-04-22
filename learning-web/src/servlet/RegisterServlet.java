@@ -8,6 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import model.Account;
 import model.RegisterLogic;
 /**
@@ -40,13 +42,28 @@ public class RegisterServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher dispatcher = null;
+
 		String mail = request.getParameter("id");
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 
+		System.out.println("入力値：" + mail + " " + name + " " + pass);
+
 		RegisterLogic bo = new RegisterLogic();
 		Account account = new Account(name, pass, mail);
-		Account result = bo.execute(account);
+		boolean result = bo.execute(account);
+
+
+		if(result) {
+			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/RegisterCompleted.jsp");
+
+
+		}else {
+			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterError.jsp");
+		}
+
+		dispatcher.forward(request, response);
 
 	}
 
