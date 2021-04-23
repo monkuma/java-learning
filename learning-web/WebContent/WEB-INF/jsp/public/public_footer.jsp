@@ -9,7 +9,7 @@
   <!-- Copyright -->
   <div class="footerInner">
     © 2021 Copyright:
-    <a class="text-dark" href="#">Yuki Kumamoto</a>
+    <a class="text-dark" href="#">Y</a>
   </div>
   <!-- Copyright -->
 </footer>
