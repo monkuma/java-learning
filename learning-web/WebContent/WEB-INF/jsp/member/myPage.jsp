@@ -1,12 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+
+<jsp:include page="../commonMeta.jsp" />
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Mypageです</h1>
+
+
+	<h1>Mypageです</h1>
+
+	<img class="mb-4" src="img/tv_black_24dp.svg" alt="" width="72"
+		height="57">
+
+	<div class="flex-card">
+		<section class="card">
+			<h1 class="card-title">Java 入門講座</h1>
+						<div class="card-img">
+				<img class="mb-4" src="img/smart_display_black_24dp.svg">
+				</div>
+			<div class="card-content">
+
+				<p class="card-text">Java Silver 対策講座です。</p>
+			</div>
+			<div class="card-link">
+				<a href="#">About</a>
+			</div>
+		</section>
+
+		<section class="card">
+			<h1 class="card-title">Java 問題集</h1>
+
+			<div class="card-img">
+				<img class="mb-4" src="img/sticky_note_2_black_24dp.svg">
+			</div>
+			<div class="card-content">
+
+				<p class="card-text">Java Silver 対策問題集です。</p>
+			</div>
+			<div class="card-link">
+				<a href="#">About</a>
+			</div>
+		</section>
+
+	</div>
+
 </body>
 </html>
