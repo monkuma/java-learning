@@ -12,8 +12,6 @@
 
 	<h1>Mypageです</h1>
 
-	<img class="mb-4" src="img/tv_black_24dp.svg" alt="" width="72"
-		height="57">
 
 	<div class="flex-card">
 		<section class="card">
@@ -26,7 +24,7 @@
 				<p class="card-text">Java Silver 対策講座です。</p>
 			</div>
 			<div class="card-link">
-				<a href="#">About</a>
+				<a href="LectureServlet">About</a>
 			</div>
 		</section>
 
