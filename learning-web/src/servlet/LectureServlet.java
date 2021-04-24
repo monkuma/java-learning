@@ -1,12 +1,15 @@
 package servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import model.Lecture;
+import model.LectureLogic;
 /**
  * Servlet implementation class LectureServlet
  */
@@ -14,20 +17,30 @@ import javax.servlet.http.HttpServletResponse;
 public class LectureServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LectureServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public LectureServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//
-		response.getWriter().append("Served at:").append(request.getContextPath());
+		RequestDispatcher dispatcher = null;
+		String pageNo = request.getParameter("pageNo");
+
+		if(pageNo == null) {
+			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/lecture01/lectureTop.jsp");
+		}else {
+			LectureLogic bo = new LectureLogic();
+			String lectureNo = bo.execute(pageNo);
+			String pageUrl = "/WEB-INF/jsp/member/lecture01/" + lectureNo;
+			dispatcher = request.getRequestDispatcher(pageUrl);
+		}
+		dispatcher.forward(request, response);
 	}
 
 	/**
