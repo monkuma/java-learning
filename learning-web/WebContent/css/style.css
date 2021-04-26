@@ -8,8 +8,18 @@ body {
 body, p, input, select, textarea, button {
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: -0.2px;
+letter-spacing: 0.06em;
+    line-height: 1.8;
 }
 
+.page-title{
+    color: #BABECC;
+    text-shadow: 1px 1px 1px #fff;
+}
+.segment {
+    padding: 20px 0;
+    text-align: center;
+}
 /*---------- Header ----------*/
 header {
 	padding: 30px 4% 10px;
@@ -33,6 +43,16 @@ header nav {
 
 header a {
 	color: #31344b;
+}
+
+/*---------- Lecture Video Area ----------*/
+.lecture-video-area{
+	width:750px;
+	background-color:red;
+
+}
+.lecture-video{
+
 }
 
 /*---------- Content-Cards ----------*/
@@ -76,7 +96,6 @@ header a {
 .card-text {
 	color: #333;
 	font-size: 14px;
-	line-height: 1.5;
 }
 
 .card-link {

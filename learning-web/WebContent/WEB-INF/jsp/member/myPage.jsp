@@ -9,9 +9,9 @@
 </head>
 <body>
 
-
-	<h1>Mypageです</h1>
-
+	<div class="segment">
+	<h1 class="page-title">My page</h1>
+	</div>
 
 	<div class="flex-card">
 		<section class="card">
