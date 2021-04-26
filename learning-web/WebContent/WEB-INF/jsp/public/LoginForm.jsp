@@ -15,7 +15,6 @@
 		<img class="mb-4" src="img/coffee_black_24dp.svg" alt="" width="72"
 			height="57">
 		<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
 		<label> E-mail<input type="email" name="id"
 			placeholder="maile@example.com" />
 		</label> Password <label> <input type="password" name="pass"

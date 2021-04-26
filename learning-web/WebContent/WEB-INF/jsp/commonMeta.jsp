@@ -15,3 +15,5 @@
   src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript"
   src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
