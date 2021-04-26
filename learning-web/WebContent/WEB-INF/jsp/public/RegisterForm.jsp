@@ -24,7 +24,7 @@
 		</label> Password<label> <input type="password" name="pass"
 			placeholder="Password" />
 		</label>
-		<button type="submit">Register</button>
+		<button  class="form-button" type="submit">Register</button>
 	</form>
 
 

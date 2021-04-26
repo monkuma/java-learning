@@ -177,7 +177,7 @@ header a {
 	text-align: center;
 }
 
-button, input {
+.form-button, input {
 	border: 0;
 	outline: 0;
 	font-size: 16px;
@@ -206,7 +206,7 @@ input:focus {
 	box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
-button {
+.form-button {
 	color: #61677C;
 	font-weight: bold;
 	box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
@@ -216,11 +216,11 @@ button {
 	width: 50%;
 }
 
-button:hover {
+.form-button:hover {
 	box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
 }
 
-button:active {
+.form-button:active {
 	box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 

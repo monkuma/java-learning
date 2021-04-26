@@ -1,6 +1,13 @@
 'use strict'
 
 //the button of lecture video
+  window.onload = function(){
+	  document.getElementById("speed").textContent ="hello world";
+
+  }
+
+
+
 window.addEventListener('DOMContentLoaded', function(){
 
 	  const videoElement = document.querySelector("video");

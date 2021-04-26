@@ -20,7 +20,7 @@
 		</label> Password <label> <input type="password" name="pass"
 			placeholder="Password" />
 		</label>
-		<button type="submit">Sign in</button>
+		<button class="form-button" type="submit">Sign in</button>
 	</form>
 
 
