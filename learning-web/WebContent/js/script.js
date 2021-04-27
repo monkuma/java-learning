@@ -1,10 +1,5 @@
 'use strict'
 
-//the button of lecture video
-  window.onload = function(){
-	  document.getElementById("speed").textContent ="hello world";
-
-  }
 
 
 
