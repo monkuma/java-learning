@@ -2,7 +2,7 @@
 
 /*Body Neumorphism*/
 body {
-	background-color: #E0E5EC;
+	background-color: #ebf5fc;
 }
 
 body, p, input, select, textarea, button {
@@ -23,7 +23,7 @@ body, p, input, select, textarea, button {
 }
 /*---------- Header ----------*/
 header {
-	padding: 30px 4% 10px;
+	padding: 25px 4% 10px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -45,17 +45,23 @@ header nav {
 header a {
 	color: #31344b;
 }
+
+.myPage-icon{
+	    font-size: 30px;
+    color: #6a9bd8;
+
+    width: 60px;
+    height: 60px;
+    background: #ebf5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
 /*---------- Video & Editor Area ----------*/
 .contents {
-	display: flex;
-	width: 100%; height : 100%;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: moz-none;
-	-ms-user-select: none;
-	user-select: none;
-	height: 100%;
+
 }
 
 .handle {
@@ -71,28 +77,39 @@ header a {
 
 /*---------- Editor Area ----------*/
 .editor-area {
-	background-color: blue;
+
 	width: 100%;
 	position: absolute;
 	right: 0;
-	top: 0;
+
+    top: 15%;
 	bottom: 0;
-	width: 740px;
+	width: 50%;
 }
 /*---------- Lecture Video Area ----------*/
 .lecture-video-area {
-	background-color: red;
 	position: absolute;
 	left: 0;
-	top: 0;
+
+    top: 15%;
 	bottom: 0;
-	right: 740px;
+	right: 50%;
 }
 
 .lecture-video {
-
+clip-path: inset(1px round 5px)
 }
 
+.video-outer {
+    padding: 15px;
+
+}
+.video-inner {
+    padding: 15px;
+    border-radius: 11px;
+    background: #ebf5fc;
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0 / 10%);
+}
 /*---------- Content-Cards ----------*/
 .flex-card {
 	display: flex; /* フレックスボックスにする */
