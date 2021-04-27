@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/style.css" type="text/css"
 	media="screen">
 
+<script src="https://kit.fontawesome.com/94bad0804a.js" crossorigin="anonymous"></script>
 
 <link type="text/css" rel="stylesheet"
   href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
