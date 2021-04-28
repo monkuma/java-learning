@@ -20,7 +20,7 @@
 		</label> Password <label> <input type="password" name="pass"
 			placeholder="Password" />
 		</label>
-		<button class="form-button" type="submit">Sign in</button>
+		<button class="form-button" type="submit"><i class="fas fa-unlock-alt"></i> Sign in</button>
 	</form>
 
 
