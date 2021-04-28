@@ -12,10 +12,12 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.RequestDispatcher;
 
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * Servlet Filter implementation class LoginCheckFilter
  */
-@WebFilter("/LoginServlet")
+@WebFilter("/MenuServlet")
 public class LoginCheckFilter implements Filter {
 
 	/**
@@ -41,19 +43,31 @@ public class LoginCheckFilter implements Filter {
 		// place your code here
 
 		// pass the request along the filter chain
-		chain.doFilter(request, response);
 
-		System.out.println("LoginCheckFileter実行");
-		HttpSession session = ((HttpServletRequest)request).getSession(false);
+			//chain.doFilter(request, response);
 
-		if(session != null){
-			// セッションがNULLでなければ、通常どおりの遷移
-			System.out.println("セッションがNULLでなければ、通常どおりの遷移");
-		}else{
-			// セッションがNullならば、ログイン画面へ飛ばす
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/RegisterServlet");
-			dispatcher.forward(request,response);
-		}
+
+			System.out.println("LoginCheckFileter実行");
+			HttpSession session = ((HttpServletRequest)request).getSession(true);
+			String name = (String)session.getAttribute("name");
+
+			System.out.println(name + " LoginCheckFilter実行");
+
+			if(name != null){
+				// セッションがNULLでなければ、通常どおりの遷移
+				System.out.println("セッションがNULLでなければ、通常どおりの遷移");
+			}else{
+				// セッションがNullならば、ログイン画面へ飛ばす
+				System.out.println("ログアウトしてるのでトップへ");
+				//RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
+				//dispatcher.forward(request,response);
+
+				  String url = "/WEB-INF/jsp/public/welcome.jsp";
+
+				  ((HttpServletResponse)response).sendRedirect(url);
+					return;
+			}
+
 	}
 
 	/**
