@@ -224,13 +224,14 @@ input:focus {
 }
 
 .form-button {
-	color: #61677C;
+	color: #AE1100;
 	font-weight: bold;
 	box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 	font-weight: 600;
 	width: 50%;
+
 }
 
 .form-button:hover {
