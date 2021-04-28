@@ -29,6 +29,7 @@
 
 
 
+
 	<jsp:include page="./public_footer.jsp" />
 </body>
 </html>
