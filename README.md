@@ -1,4 +1,4 @@
-# Oracle Certified Java Silver 試験の対策ができるサイトです
+# Oracle Certified Java Silver 試験の対策ができるサイト
 
 ## サービス
 * Javaの講座が視聴できる。
