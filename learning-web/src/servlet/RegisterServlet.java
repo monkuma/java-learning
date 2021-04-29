@@ -31,6 +31,7 @@ public class RegisterServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setAttribute("pageName", "Sign up");
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterForm.jsp");
 
@@ -56,7 +57,7 @@ public class RegisterServlet extends HttpServlet {
 
 
 		if(result) {
-			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/RegisterCompleted.jsp");
+			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterCompleted.jsp");
 
 
 		}else {

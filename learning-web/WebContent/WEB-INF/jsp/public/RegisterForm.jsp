@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
 <jsp:include page="../commonMeta.jsp" />
 <title>登録ページです</title>

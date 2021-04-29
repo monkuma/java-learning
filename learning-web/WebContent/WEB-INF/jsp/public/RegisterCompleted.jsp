@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="model.Account" %>
-<%
-String name = (String)session.getAttribute("name");
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,14 +8,23 @@ String name = (String)session.getAttribute("name");
 <title>Insert title here</title>
 </head>
 <body>
-<div class="container">
-<h1>登録が完了しました！</h1>
-<h2><%= name %>さん</h2>
 
-</div>
+	<jsp:include page="./public_header.jsp" />
+<div class="flex-card">
+		<section class="card"  style="width:35%">
+			<div class="card-content">
+				<h1>ご登録ありがとうございます！</h1>
+				<p class="card-text">会員登録完了しましたので下記のボタンをクリックして<br>ログインしましょう♪</p>
+			</div>
+			<div class="card-link">
+				<a href="LoginServlet">LOGIN</a>
+			</div>
+		</section>
+
+	</div>
 
 
 
-
+	<jsp:include page="./public_footer.jsp" />
 </body>
 </html>

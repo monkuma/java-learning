@@ -10,11 +10,18 @@
 
 <div class="container">
 <jsp:include page="./public_header.jsp" />
-<h1>Errorページです</h1>
+<div class="flex-card">
+		<section class="card" style="width:35%">
+			<div class="card-content">
+				<h1>すみません...エラーです...。</h1>
+				<p class="card-text">もう一度最初からお願いします...</p>
+			</div>
+			<div class="card-link">
+				<a href="Main">TOP</a>
+			</div>
+		</section>
 
-
-</div>
-
+	</div>
 
 <jsp:include page="./public_footer.jsp" />
 

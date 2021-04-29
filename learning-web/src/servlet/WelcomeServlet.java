@@ -31,6 +31,8 @@ public class WelcomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		request.setAttribute("pageName", "ようこそ");
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
 
 		dispatcher.forward(request, response);

@@ -8,10 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<jsp:include page="./member_header.jsp" />
 
-	<div class="segment">
-	<h1 class="page-title">My page</h1>
-	</div>
 
 	<div class="flex-card">
 		<section class="card">
@@ -24,7 +22,7 @@
 				<p class="card-text">Java Silver 対策講座です。</p>
 			</div>
 			<div class="card-link">
-				<a href="LectureServlet">About</a>
+				<a href="LectureServlet?lecNo=lecture01">About</a>
 			</div>
 		</section>
 

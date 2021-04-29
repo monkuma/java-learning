@@ -35,20 +35,17 @@ public class LectureServlet extends HttpServlet {
 		String lecNo = request.getParameter("lecNo");
 		String pathMember = "/WEB-INF/jsp/member/";
 
+		if(pageNo == null) {
 
-		if(lecNo == null) {
-
-			LectureLogic bo = new LectureLogic();
-			String lectureNo = bo.execute(pageNo);
-
-			dispatcher = request.getRequestDispatcher(pathMember + lectureNo);
+			dispatcher = request.getRequestDispatcher(pathMember + "lectureTop.jsp");
+			request.setAttribute("lecNo", lecNo);
 
 		}else {
 			LectureLogic bo = new LectureLogic();
-			String lectureNo = bo.execute(pageNo);
+			pageNo = bo.execute(pageNo);
 
 			dispatcher = request.getRequestDispatcher(pathMember + "lectures.jsp");
-			request.setAttribute("lectureNo", lectureNo);
+			request.setAttribute("pageNo", pageNo);
 			request.setAttribute("lecNo", lecNo);
 
 		}
