@@ -30,16 +30,29 @@ public class LectureServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher = null;
-		String pageNo = request.getParameter("pageNo");
 
-		if(pageNo == null) {
-			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/lecture01/lectureTop.jsp");
+		String pageNo = request.getParameter("pageNo");
+		String lecNo = request.getParameter("lecNo");
+		String pathMember = "/WEB-INF/jsp/member/";
+
+
+		if(lecNo == null) {
+
+			LectureLogic bo = new LectureLogic();
+			String lectureNo = bo.execute(pageNo);
+
+			dispatcher = request.getRequestDispatcher(pathMember + lectureNo);
+
 		}else {
 			LectureLogic bo = new LectureLogic();
 			String lectureNo = bo.execute(pageNo);
-			String pageUrl = "/WEB-INF/jsp/member/lecture01/" + lectureNo;
-			dispatcher = request.getRequestDispatcher(pageUrl);
+
+			dispatcher = request.getRequestDispatcher(pathMember + "lectures.jsp");
+			request.setAttribute("lectureNo", lectureNo);
+			request.setAttribute("lecNo", lecNo);
+
 		}
+
 		dispatcher.forward(request, response);
 	}
 

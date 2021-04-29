@@ -57,10 +57,7 @@ public class LoginCheckFilter implements Filter {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
 				dispatcher.forward(request,response);
 
-//				  String url = "/WEB-INF/jsp/public/welcome.jsp";
-
-//				  ((HttpServletResponse)response).sendRedirect(url);
-					return;
+				return;
 			}
 
 	}
