@@ -35,6 +35,7 @@ public class MenuServlet extends HttpServlet {
 		switch(action) {
 		case "myPage":
 			dispatcher = request.getRequestDispatcher(path + "myPage.jsp");
+
 			break;
 		}
 
