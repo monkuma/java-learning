@@ -11,13 +11,13 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.DispatcherType;
 
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet Filter implementation class LoginCheckFilter
  */
-@WebFilter("/MenuServlet")
+@WebFilter(dispatcherTypes = {DispatcherType.FORWARD}, urlPatterns = {"/WEB-INF/jsp/member/*"})
 public class LoginCheckFilter implements Filter {
 
 	/**
@@ -39,12 +39,6 @@ public class LoginCheckFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-
-		// pass the request along the filter chain
-
-			//chain.doFilter(request, response);
 
 
 			System.out.println("LoginCheckFileter実行");
@@ -54,17 +48,18 @@ public class LoginCheckFilter implements Filter {
 			System.out.println(name + " LoginCheckFilter実行");
 
 			if(name != null){
+				chain.doFilter(request, response);
 				// セッションがNULLでなければ、通常どおりの遷移
 				System.out.println("セッションがNULLでなければ、通常どおりの遷移");
 			}else{
 				// セッションがNullならば、ログイン画面へ飛ばす
 				System.out.println("ログアウトしてるのでトップへ");
-				//RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
-				//dispatcher.forward(request,response);
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
+				dispatcher.forward(request,response);
 
-				  String url = "/WEB-INF/jsp/public/welcome.jsp";
+//				  String url = "/WEB-INF/jsp/public/welcome.jsp";
 
-				  ((HttpServletResponse)response).sendRedirect(url);
+//				  ((HttpServletResponse)response).sendRedirect(url);
 					return;
 			}
 
