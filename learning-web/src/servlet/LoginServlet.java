@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setAttribute("pageName", "Login Form");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/LoginForm.jsp");
 		dispatcher.forward(request, response);
 
@@ -57,6 +58,7 @@ public class LoginServlet extends HttpServlet {
 
 			System.out.println("Login処理成功したのでmyPage.jspへフォワード");
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/myPage.jsp");
+			request.setAttribute("pageName", "Mypage");
 
 
 		}else { //Login失敗

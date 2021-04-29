@@ -5,16 +5,9 @@ public class LectureLogic {
 
 	public String execute(String pageNo) {
 
-		try {
-			int page = Integer.parseInt(pageNo);
-			this.lecture += page + ".jsp";
 
-		}catch(Exception e){
+		this.lecture += pageNo +".jsp";
 
-			this.lecture = "lectureTop.jsp";
-		}finally {
-
-		}
 		return lecture;
 	}
 
