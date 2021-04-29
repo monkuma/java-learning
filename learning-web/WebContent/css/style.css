@@ -15,23 +15,78 @@ body, p, input, select, textarea, button {
 .page-title {
 	color: #BABECC;
 	text-shadow: 1px 1px 1px #fff;
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .segment {
-	padding: 20px 0;
+	padding: 10px 0 0 0;
 	text-align: center;
 }
+
+/*---------- lecture lists Area ----------*/
+.lecture-list-area {
+	display: flex;
+	justify-content: center;
+
+    margin-top: 40px;
+}
+
+a.lecture-item {
+	color: #6a9bd8;
+	margin-bottom: 20px;
+	padding: 15px;
+	width: 400px;
+	background: #ebf5fc;
+	display: flex;
+
+	border-radius: 10px;
+	box-shadow: -6px -6px 14px rgba(255, 255, 255, .7), -6px -6px 10px
+		rgba(255, 255, 255, .5), 6px 6px 8px rgba(255, 255, 255, .075), 6px
+		6px 10px rgba(0, 0, 0, .15);
+}
+
+/*---------- Action of clicking button ----------*/
+.click-menubtn:hover {
+	transform: scale(1.05);
+	box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1), -4px -4px 10px
+		rgba(255, 255, 255, 1);
+}
+
+.click-menubtn a:focus {
+	outline: none;
+	transform: scale(0.95);
+	box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1), -4px -4px 10px
+		rgba(255, 255, 255, 1), 4px 4px 10px 0 rgba(0, 0, 0, .1) inset, -4px
+		-4px 10px rgba(255, 255, 255, 1) inset;
+	transform: scale(0.95);
+}
+
+.sink-button:hover {
+	box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), -2px -2px 4px
+		rgba(255, 255, 255, .4), 2px 2px 2px rgba(255, 255, 255, .05), 2px 2px
+		4px rgba(0, 0, 0, .1);
+}
+
+.sink-button:active {
+	box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7), inset -2px -2px
+		4px rgba(255, 255, 255, .5), inset 2px 2px 2px
+		rgba(255, 255, 255, .075), inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+
 /*---------- Header ----------*/
 header {
-	padding: 25px 4% 10px;
-	width: 100%;
-	display: flex;
-	align-items: center;
+	height: 80px;
+	background-color: #ebf5fc;
+	box-shadow: 10px 10px 12px 0 rgb(0 0 0/ 7%);
+	border-radius: 0 0 10px 10px;
+	padding: 0 3rem;
 }
 
 header ul {
 	margin: 0;
 	display: flex;
+	align-items: center;
 }
 
 header li {
@@ -39,26 +94,44 @@ header li {
 }
 
 header nav {
-	margin: 0 0 0 auto;
+	margin: 20px 0 0 auto;
 }
 
 header a {
 	color: #31344b;
 }
 
-.myPage-icon{
-	    font-size: 30px;
-    color: #6a9bd8;
-
-    width: 60px;
-    height: 60px;
-    background: #ebf5fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0 / 10%);
-    border-radius: 10px;
+.myPage-icon {
+	font-size: 30px;
+	color: #6a9bd8;
+	width: 60px;
+	height: 60px;
+	background: #ebf5fc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0/ 10%);
+	border-radius: 10px;
 }
+
+header li:first-child {
+	margin-right: auto;
+}
+/*---------- Buttons of Public header ----------*/
+.pub-btn {
+	border-radius: 10%;
+	background: #ebf5fc;
+	box-shadow: 5px 5px 10px #c8d0d6, -5px -5px 10px #ffffff;
+	color: #444;
+	font-weight: 700;
+	letter-spacing: .1rem;
+}
+
+.pub-btn a {
+	display: block;
+	padding: 10px;
+}
+
 /*---------- Video & Editor Area ----------*/
 .contents {
 
@@ -71,18 +144,15 @@ header a {
 	bottom: 0;
 	width: 8px;
 	cursor: w-resize;
-
-    background-color: white;
+	background-color: white;
 }
 
 /*---------- Editor Area ----------*/
 .editor-area {
-
 	width: 100%;
 	position: absolute;
 	right: 0;
-
-    top: 15%;
+	top: 20%;
 	bottom: 0;
 	width: 50%;
 }
@@ -90,25 +160,24 @@ header a {
 .lecture-video-area {
 	position: absolute;
 	left: 0;
-
-    top: 15%;
+	top: 20%;
 	bottom: 0;
 	right: 50%;
 }
 
 .lecture-video {
-clip-path: inset(1px round 5px)
+	clip-path: inset(1px round 5px)
 }
 
 .video-outer {
-    padding: 15px;
-
+	padding: 15px;
 }
+
 .video-inner {
-    padding: 15px;
-    border-radius: 11px;
-    background: #ebf5fc;
-    box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0 / 10%);
+	padding: 15px;
+	border-radius: 11px;
+	background: #ebf5fc;
+	box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0/ 10%);
 }
 /*---------- Content-Cards ----------*/
 .flex-card {
@@ -121,7 +190,7 @@ clip-path: inset(1px round 5px)
 	width: 400px;
 	padding: 30px;
 	flex-direction: column;
-	background: #f1f3f6;
+	background: #ebf5fc;
 	border-radius: 20px;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	box-shadow: 9px 9px 16px rgb(163 177 198/ 60%), -9px -9px 16px
@@ -192,6 +261,7 @@ clip-path: inset(1px round 5px)
 	margin: 0 auto;
 	width: 35%;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .form-button, input {
@@ -231,7 +301,6 @@ input:focus {
 	cursor: pointer;
 	font-weight: 600;
 	width: 50%;
-
 }
 
 .form-button:hover {
