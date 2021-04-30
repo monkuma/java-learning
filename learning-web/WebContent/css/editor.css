@@ -1,0 +1,28 @@
+.ace_editor {
+	position: relative;
+	overflow: hidden;
+	font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+	font-family : monospace !important;
+		direction: ltr;
+}
+
+#editor *{ font-family : monospace !important;font-size: 16px !important;direction:ltr !important;text-align:left !important;}
+
+.editor-outer{
+
+    padding: 15px;
+}
+.editor-inner{
+
+    padding: 15px;
+    border-radius: 11px;
+    background: #ebf5fc;
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0 / 10%);
+}
+
+.result-outer {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #2c2c2f;
+    background: #cde4ff;
+}
