@@ -140,7 +140,7 @@ header li:first-child {
 .handle {
 	position: absolute;
 	left: -4px;
-	top: 0;
+	top: 15px;
 	bottom: 0;
 	width: 8px;
 	cursor: w-resize;
@@ -152,7 +152,7 @@ header li:first-child {
 	width: 100%;
 	position: absolute;
 	right: 0;
-	top: 20%;
+	top: 15%;
 	bottom: 0;
 	width: 50%;
 }
@@ -160,7 +160,7 @@ header li:first-child {
 .lecture-video-area {
 	position: absolute;
 	left: 0;
-	top: 20%;
+	top: 15%;
 	bottom: 0;
 	right: 50%;
 }
