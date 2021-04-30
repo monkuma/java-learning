@@ -13,7 +13,7 @@
 	<jsp:include page="./${lecNo}/${pageNo}" />
 
 
-<jsp:include page="./lecture01/Editor.jsp" />
-<jsp:include page="./lecture01/SideBar.jsp" />
+<jsp:include page="./Editor.jsp" />
+<!--<jsp:include page="./lecture01/SideBar.jsp" /> -->
 </body>
 </html>
