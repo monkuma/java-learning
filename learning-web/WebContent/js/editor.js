@@ -9,7 +9,7 @@ const resetCodebtn = document.getElementById('reset');
 let codeEditor = ace.edit("editor");
 codeEditor.$blockScrolling = Infinity;
 
-const defaultCode = "public class Main {public static void main(String[] args) throws Exception {\nSystem.out.println(\"Default Code Hello!!\");\n} \n}";
+const defaultCode = "public class Main {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(\"Default Code Hello!!\");\n\n\t} \n}";
 
 let editorLib = {
 	init(){
