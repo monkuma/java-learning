@@ -11,12 +11,15 @@
 	<div class="lecture-list-area">
 
 		<ul class="lecture-lists">
-			<li><a class="sink-button lecture-item" href="LectureServlet?pageNo=1&lecNo=lecture01">Dummy Text</a></li>
-			<li><a class="sink-button lecture-item" href="#">Sample</a></li>
-			<li><a class="sink-button lecture-item" href="#">Java </a></li>
-			<li><a class="sink-button lecture-item" href="#">Python</a></li>
-			<li><a class="sink-button lecture-item" href="#">Ruby</a></li>
+			<li><a class="sink-button lecture-item" href="LectureServlet?pageNo=1&lecNo=lecture01">変数</a></li>
+			<li><a class="sink-button lecture-item" href="#">式と演算子</a></li>
+			<li><a class="sink-button lecture-item" href="#">条件式</a></li>
+			<li><a class="sink-button lecture-item" href="#">繰返し</a></li>
+			<li><a class="sink-button lecture-item" href="#">配列</a></li>
 		</ul>
 	</div>
+
+
+
 </body>
 </html>
