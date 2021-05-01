@@ -4,17 +4,18 @@ import dao.AccountDAO;
 
 public class RegisterLogic {
 	AccountDAO dao = new AccountDAO();
-	boolean isBlank;
-	boolean isEnabled;
+	boolean hasBlank;
+	boolean MailisEnabled;
+	boolean PassGeSix;
 
 	public boolean execute(Account account) {
 
+		hasBlank = checkBlank(account);
+		MailisEnabled = checkMail(account);
+		PassGeSix = checkTheLengthOfPass(account);
 
-		isBlank = checkBlank(account);
-		isEnabled = checkMail(account);
-
-		if(isBlank == false && isEnabled == true) {
-			//未記入でない、アドレスが使用済みでなければ登録処理
+		if(hasBlank && MailisEnabled && PassGeSix) {
+			//未記入でない、アドレスが使用済みでない、Passが6文字以上で登録処理
 			boolean result = dao.insertAccount(account);
 			return result;
 		}
@@ -22,20 +23,29 @@ public class RegisterLogic {
 
 	}
 
-	//未入力をチェックします
+		//未入力をチェックします
 	private boolean checkBlank(Account account) {
 
 		if(account.getMail().equals("") || account.getName().equals("") || account.getPass().equals("")) {
-			return true;
-		}else {
 			return false;
+		}else {
+			return true;
 		}
 	}
 
 	//メールアドレスが使用済みでないか確認します
 	private boolean checkMail(Account account) {
-		isEnabled = dao.registerCheck(account.getMail());
-		return isEnabled;
+		MailisEnabled = dao.registerCheck(account.getMail());
+		return MailisEnabled;
+	}
+
+	//Passが6文字以上でTrue
+	private boolean checkTheLengthOfPass(Account account) {
+		if(account.getPass().length() >= 6) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }
