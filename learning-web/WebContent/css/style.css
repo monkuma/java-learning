@@ -28,18 +28,22 @@ body, p, input, select, textarea, button {
 .lecture-list-area {
 	display: flex;
 	justify-content: center;
+	margin-top: 40px;
+}
 
-    margin-top: 40px;
+.lecture-lists {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 a.lecture-item {
-	color: #6a9bd8;
-	margin-bottom: 20px;
+	color: #212529;
+	margin-bottom: 50px;
+	margin-right: 75px;
 	padding: 15px;
-	width: 400px;
+	width: 211px;
 	background: #ebf5fc;
 	display: flex;
-
 	border-radius: 10px;
 	box-shadow: -6px -6px 14px rgba(255, 255, 255, .7), -6px -6px 10px
 		rgba(255, 255, 255, .5), 6px 6px 8px rgba(255, 255, 255, .075), 6px
@@ -147,6 +151,26 @@ header li:first-child {
 	background-color: white;
 }
 
+.lecture-button {
+
+    color: #6a9bd8;
+    border: none;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    background: #ebf5fc;
+    box-shadow: 5px 5px 10px #c8d0d6, -5px -5px 10px #ffffff;
+}
+
+.lecture-button {
+    margin-right: 35px;
+}
+
+.video-button-area {
+    display: flex;
+    justify-content: center;
+
+}
 /*---------- Editor Area ----------*/
 .editor-area {
 	width: 100%;
@@ -175,10 +199,11 @@ header li:first-child {
 
 .video-inner {
 	padding: 15px;
-	border-radius: 11px;
+	border-radius: 10px;
 	background: #ebf5fc;
 	box-shadow: -2px -2px 5px white, 3px 3px 5px rgb(0 0 0/ 10%);
 }
+
 /*---------- Content-Cards ----------*/
 .flex-card {
 	display: flex; /* フレックスボックスにする */

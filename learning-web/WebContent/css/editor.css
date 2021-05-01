@@ -13,12 +13,10 @@
 	font-size: 16px !important;
 	direction: ltr !important;
 	text-align: left !important;
-
 }
 
-#editor{
-
-    margin-bottom: 10px;
+#editor {
+	margin-bottom: 10px;
 }
 
 .editor-outer {
@@ -37,4 +35,16 @@
 	margin: 1em 0;
 	color: #2c2c2f;
 	background: #cde4ff;
+}
+
+.editor-button {
+	border: none;
+	margin-right: 5px;
+	padding: 5px;
+	font-weight: bold;
+	color: #6a9bd8;
+}
+
+.editor-button:hover{
+	opacity:0.5;
 }

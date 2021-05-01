@@ -15,9 +15,10 @@
       }
   }
   </div>
-  <button id="exe">Execute</button>
-
-  <button id="reset">Reset</button>
+  <div class="editor-button-area">
+  <button id="exe" class="editor-button"><i class="fas fa-rocket"></i> Execute</button>
+  <button id="reset" class="editor-button"><i class="fas fa-trash-alt"></i> Reset</button>
+  </div>
   </div>
   <div class="result-outer">
   <p>実行結果</p>
