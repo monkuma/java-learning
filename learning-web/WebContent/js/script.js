@@ -1,31 +1,25 @@
 'use strict'
 
-
-
-
 window.addEventListener('DOMContentLoaded', function(){
 
 	  const videoElement = document.querySelector("video");
 	  const btn_slow = document.getElementById("btn_slow");
-	  const btn_normal = document.getElementById("btn_normal");
 	  const btn_fast = document.getElementById("btn_fast");
-	  const btn_veryfast = document.getElementById("btn_veryfast");
 
 	  btn_slow.addEventListener("click", (e) => {
-	    videoElement.playbackRate = 0.5;
+	    videoElement.playbackRate -= 0.15;
+		  if(videoElement.playbackRate == 0){
+			  videoElement.playbackRate = 0.1;
+		  }
 	  });
 
-	  btn_normal.addEventListener("click", (e) => {
-	    videoElement.playbackRate = 1.0;
-	  });
+
 
 	  btn_fast.addEventListener("click", (e) => {
-	    videoElement.playbackRate = 2.0;
+	    videoElement.playbackRate += 0.25;
 	  });
 
-	  btn_veryfast.addEventListener("click", (e) => {
-	    videoElement.playbackRate = 3.0;
-	  });
+
 	});
 
 
