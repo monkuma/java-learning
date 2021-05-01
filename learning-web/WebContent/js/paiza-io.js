@@ -52,10 +52,10 @@ async function main(input_code) {
 	if(details_response.stdout == null){
 		console.log("異常終了結果：　" + details_response.build_stderr);
 
-		result.innerHTML = details_response.build_stderr;
+		result.innerText = details_response.build_stderr;
 	}else{
 		console.log("出力結果：　" + details_response.stdout);
-		result.innerHTML = details_response.stdout;
+		result.innerText = details_response.stdout;
 
 	}
 
