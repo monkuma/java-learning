@@ -151,6 +151,8 @@ header li:first-child {
 	background-color: white;
 }
 
+
+
 .lecture-button {
 
     color: #6a9bd8;
@@ -158,12 +160,18 @@ header li:first-child {
     border-radius: 100px;
     width: 50px;
     height: 50px;
+
+    margin-right: 35px;
     background: #ebf5fc;
     box-shadow: 5px 5px 10px #c8d0d6, -5px -5px 10px #ffffff;
 }
 
-.lecture-button {
-    margin-right: 35px;
+
+.lecture-button:focus {
+	box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+.card-link:active {
+	box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
 .video-button-area {
