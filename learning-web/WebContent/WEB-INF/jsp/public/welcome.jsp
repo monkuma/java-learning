@@ -23,7 +23,7 @@ request.setAttribute("pageName","About");
 				<p class="card-text">このサイトではJava Silver試験対策の講座と問題集を提供しています。<br>ぜひ、会員登録して利用してください。</p>
 			</div>
 			<div class="card-link">
-				<a href="#">About</a>
+				<a href="RegisterServlet">会員登録する</a>
 			</div>
 		</section>
 
