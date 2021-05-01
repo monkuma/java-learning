@@ -2,10 +2,8 @@
 	pageEncoding="UTF-8"%>
 
 <header>
-	<h1>
-		<!--        <a href="Main"><img class="mb-4" src="#" alt="" width="72"height="57"></a> -->
 
-	</h1>
+
 	<nav class="pc-nav">
 		<ul>
 			<li><a href="#" class="page-title">${pageName}</a></li>

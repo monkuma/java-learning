@@ -18,13 +18,13 @@ import model.Login;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public LoginServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -56,13 +56,13 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("name", account.getName());
 
-			System.out.println("Login処理成功したのでmyPage.jspへフォワード");
+
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/myPage.jsp");
 			request.setAttribute("pageName", "Mypage");
 
 
 		}else { //Login失敗
-			System.out.println("Login処理失敗したのでLoginForm.jspへフォワード");
+
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/LoginForm.jsp");
 		}
 
