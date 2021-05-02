@@ -9,7 +9,7 @@ request.setAttribute("pageName","About");
 <head>
 <jsp:include page="../commonMeta.jsp" />
 
-	<title>トップページです</title>
+	<title>トップページ</title>
 </head>
 <body>
 

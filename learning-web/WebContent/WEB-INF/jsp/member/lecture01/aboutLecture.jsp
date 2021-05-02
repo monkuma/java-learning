@@ -1,18 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
-<%
-request.setAttribute("pageName","Java入門講座");
+	<%
+request.setAttribute("pageName","MyPage");
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
 	<div class="lecture-list-area">
 
 		<ul class="lecture-lists">
@@ -29,6 +20,3 @@ request.setAttribute("pageName","Java入門講座");
 	</div>
 
 
-
-</body>
-</html>
