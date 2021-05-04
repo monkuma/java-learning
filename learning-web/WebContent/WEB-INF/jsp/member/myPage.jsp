@@ -9,7 +9,7 @@ request.setAttribute("pageName","MyPage");
 <head>
 
 <jsp:include page="../commonMeta.jsp" />
-<title>Insert title here</title>
+<title>MyPage</title>
 </head>
 <body>
 	<jsp:include page="./member_header.jsp" />

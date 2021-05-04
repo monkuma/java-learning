@@ -20,7 +20,7 @@ request.setAttribute("pageName","Login");
 			height="57">
 		<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 		<label> E-mail<input type="email" name="id"
-			placeholder="maile@example.com" />
+			placeholder="mail@example.com" />
 		</label> Password <label> <input type="password" name="pass"
 			placeholder="Password" />
 		</label>
