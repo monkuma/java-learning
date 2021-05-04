@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 
 
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/myPage.jsp");
-			request.setAttribute("pageName", "Mypage");
+
 
 
 		}else { //Login失敗

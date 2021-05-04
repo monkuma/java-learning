@@ -28,6 +28,11 @@ var isResizing = false,
 lastDownX = 0;
 
 $(function () {
+
+
+
+
+
 	var container = $('.contents'),
 	left = $('.lecture-video-area'),
 	right = $('.editor-area'),

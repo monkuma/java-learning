@@ -1,4 +1,9 @@
+
+
+
+
 document.write("<script type='text/javascript' src='paiza-io.js'></script>");
+
 
 //set button
 const executeCodebtn = document.getElementById('exe');
@@ -13,6 +18,7 @@ const defaultCode = "public class Main {\n\tpublic static void main(String[] arg
 
 let editorLib = {
 	init(){
+
 
 		//theme
 		codeEditor.setTheme("ace/theme/monokai");
@@ -46,6 +52,7 @@ resetCodebtn.addEventListener('click', () =>{
 
 	console.log(defaultCode);
 });
+
 
 
 editorLib.init();

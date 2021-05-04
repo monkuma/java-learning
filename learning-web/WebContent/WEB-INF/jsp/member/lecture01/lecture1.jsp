@@ -12,7 +12,6 @@
 					preload="metadata" disablePictureInPicture style="width: 100%;">
 				</video>
 
-				<h2>変数</h2>
 				<div class="video-button-area">
 					<button class="lecture-button" onclick="location.href='#'">
 						<i class="fas fa-step-backward"></i>
@@ -27,9 +26,29 @@
 						<i class="fas fa-step-forward"></i>
 					</button>
 				</div>
+
 			</div>
+
+
+		</div>
+
+		<div class="result-outer">
+			<h2>変数とデータ型 ミニ問題集</h2>
+<pre><code onCopy="alert('コピペせずに頑張ろう♪'); return false;">
+//1.以下のコードの出力結果を求めよう！
+int num1 = 5;
+System.out.println(num1 + num2);
+int num2 = 5;
+
+//2.以下のコードの出力結果を求めよう！
+int a, b, c, d, e;
+a = b = c = d = e = 100;
+System.out.println(c);
+</code>
+</pre>
 		</div>
 	</div>
+
 
 
 
