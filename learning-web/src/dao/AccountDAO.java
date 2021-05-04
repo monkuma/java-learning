@@ -110,6 +110,7 @@ public class AccountDAO {
 		}finally{
 			closeConnection(conn);
 		}
+		System.out.println("insertAccount　失敗");
 		return false;
 	}
 
