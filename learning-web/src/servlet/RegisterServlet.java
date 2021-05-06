@@ -19,20 +19,18 @@ import model.RegisterLogic;
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RegisterServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public RegisterServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("pageName", "Sign up");
-
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterForm.jsp");
 
 		dispatcher.forward(request, response);
@@ -49,8 +47,6 @@ public class RegisterServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 
-		System.out.println("入力値：" + mail + " " + name + " " + pass);
-
 		RegisterLogic bo = new RegisterLogic();
 		Account account = new Account(name, pass, mail);
 		boolean result = bo.execute(account);
@@ -58,7 +54,6 @@ public class RegisterServlet extends HttpServlet {
 
 		if(result) {
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterCompleted.jsp");
-
 
 		}else {
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/RegisterError.jsp");
