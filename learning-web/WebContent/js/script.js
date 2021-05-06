@@ -1,5 +1,6 @@
 'use strict'
 
+//Options of Lecture videos
 window.addEventListener('DOMContentLoaded', function(){
 
 	  const videoElement = document.querySelector("video");
@@ -28,9 +29,6 @@ var isResizing = false,
 lastDownX = 0;
 
 $(function () {
-
-
-
 
 
 	var container = $('.contents'),
