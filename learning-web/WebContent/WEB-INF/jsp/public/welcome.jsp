@@ -8,6 +8,7 @@ request.setAttribute("pageName","About");
 <html lang="jp">
 <head>
 <jsp:include page="../commonMeta.jsp" />
+  <meta name="description" content="JavaSilver試験対策ができるサイトです。" />
 
 	<title>トップページ</title>
 </head>
