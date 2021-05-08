@@ -7,10 +7,13 @@
 <footer>
 
   <!-- Copyright -->
-  <div class="footerInner">
-    © 2021 Copyright:
-    <a class="text-dark" href="#">  Yuki Kumamoto</a>
+    <div class="footerInner">
+<a href="TermsOfUseServlet">利用規約</a>
   </div>
-  <!-- Copyright -->
+  <div class="footerInner"><small>Copyright © LearnJava All Rights Reserved.</small>
+  </div>
+<!-- Copyright -->
+
+
 </footer>
 <!-- Footer -->

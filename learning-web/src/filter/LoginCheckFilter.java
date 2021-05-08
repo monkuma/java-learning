@@ -45,15 +45,12 @@ public class LoginCheckFilter implements Filter {
 			HttpSession session = ((HttpServletRequest)request).getSession(true);
 			String name = (String)session.getAttribute("name");
 
-			System.out.println(name + " LoginCheckFilter実行");
 
 			if(name != null){
 				chain.doFilter(request, response);
 				// セッションがNULLでなければ、通常どおりの遷移
-				System.out.println("セッションがNULLでなければ、通常どおりの遷移");
 			}else{
 				// セッションがNullならば、ログイン画面へ飛ばす
-				System.out.println("ログアウトしてるのでトップへ");
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/public/welcome.jsp");
 				dispatcher.forward(request,response);
 

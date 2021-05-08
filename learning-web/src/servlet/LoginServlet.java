@@ -51,10 +51,10 @@ public class LoginServlet extends HttpServlet {
 
 		RequestDispatcher dispatcher = null;
 
-
 		if(account != null) { //Login成功
 			HttpSession session = request.getSession();
 			session.setAttribute("name", account.getName());
+			session.setAttribute("mail", account.getMail());
 
 			dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member/myPage.jsp");
 

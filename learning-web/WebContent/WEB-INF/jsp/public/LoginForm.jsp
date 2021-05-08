@@ -9,7 +9,7 @@ request.setAttribute("pageName","Login");
 <head>
 
 <jsp:include page="../commonMeta.jsp" />
-<title>登録ページです</title>
+<title>LoginForm</title>
 </head>
 <body>
 

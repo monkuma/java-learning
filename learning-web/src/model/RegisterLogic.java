@@ -1,7 +1,9 @@
 package model;
 import java.security.NoSuchAlgorithmException;
+import java.util.ResourceBundle;
 import java.security.MessageDigest;
 import dao.AccountDAO;
+
 
 public class RegisterLogic {
 	AccountDAO dao = new AccountDAO();
@@ -18,8 +20,11 @@ public class RegisterLogic {
 		if(hasBlank && MailisEnabled && PassGeSix) {
 
 			try {
+				ResourceBundle rb = ResourceBundle.getBundle("db");
+				final String HASH = rb.getString("HASH");
+
 				//未記入でない、アドレスが使用済みでない、Passが6文字以上で登録処理
-				MessageDigest md = MessageDigest.getInstance("SHA-256");
+				MessageDigest md = MessageDigest.getInstance(HASH);
 				byte[] hash = md.digest(account.getPass().getBytes());
 				String hashPass =new String(hash);
 				account.setPass(hashPass);
