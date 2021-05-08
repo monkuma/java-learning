@@ -24,6 +24,51 @@ body, p, input, select, textarea, button {
 	text-align: center;
 }
 
+
+/*---------- terms of use Area ----------*/
+.terms-of-use-area {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.terms-of-use {
+    width: 50%;
+}
+
+.terms-of-use ol{
+	list-style-type: decimal
+}
+/*---------- ModAccount table Area ----------*/
+.account-table-area {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+table.account-table th, table.account-table td {
+	padding: 30px;
+}
+
+table.account-table th {
+	text-align: center;
+}
+
+table.account-table {
+	border-radius: 10px;
+	width: 40%;
+	box-shadow: -9px -9px 16px white, 9px 9px 16px rgb(0 0 0/ 10%);
+}
+
+.account-config-area {
+	text-align: right; width : 40%;
+	margin: 0 auto;
+	width: 40%;
+}
+
+.account-config-area a {
+	color: red;
+}
 /*---------- lecture lists Area ----------*/
 .lecture-list-area {
 	display: flex;
@@ -177,8 +222,7 @@ header li:first-child {
 }
 /*---------- Editor Area ----------*/
 .editor-area {
-
-    height: 1000px;
+	height: 1000px;
 	position: absolute;
 	right: 0;
 	top: 15%;
@@ -315,12 +359,63 @@ input {
 	width: 100%;
 	box-sizing: border-box;
 	transition: all 0.2s ease-in-out;
-	appearance: none;
-	-webkit-appearance: none;
 }
 
 input:focus {
 	box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+input[type=checkbox] {
+    display: none;
+}
+
+.form-check-label {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+
+}
+.form-check-label::before {
+    background: #fff;
+
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+
+    background-color: #d1d9e6;
+    border: 1px solid #b1bcce;
+    transition: all .2s ease;
+    border-radius: 50%;
+    box-shadow: inset 1px 2px 2px #b8b9be, inset -5px -2px 4px #fff;
+}
+.form-check-label::after {
+    border-right: 3px solid #212529;
+    border-bottom: 3px solid #212529;
+    content: '';
+    display: block;
+    height: 11px;
+    left: 11px;
+    margin-top: -7px;
+    opacity: 0;
+    position: absolute;
+    top: 48%;
+    transform: rotate(45deg);
+    width: 5px;
+
+    transition: all .2s ease;
+}
+input[type=checkbox]:checked + .form-check-label::after {
+    opacity: 1;
+}
+.form-check-label {
+	cursor: pointer;
 }
 
 .form-button {
