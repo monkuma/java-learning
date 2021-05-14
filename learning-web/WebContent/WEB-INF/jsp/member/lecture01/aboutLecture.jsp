@@ -7,7 +7,7 @@ request.setAttribute("pageName","MyPage");
 	<div class="lecture-list-area">
 
 		<ul class="lecture-lists">
-			<li><a class="sink-button lecture-item" href="LectureServlet?pageNo=1&lecNo=lecture01">変数とデータ型</a></li>
+			<li><a class="sink-button lecture-item" href="LectureServlet?pageNo=1&lecture=lecture01">変数とデータ型</a></li>
 			<li><a class="sink-button lecture-item" href="">式と演算子(準備中)</a></li>
 			<li><a class="sink-button lecture-item" href="#">条件式(準備中)</a></li>
 			<li><a class="sink-button lecture-item" href="#">繰返し(準備中)</a></li>
