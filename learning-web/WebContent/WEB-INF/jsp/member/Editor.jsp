@@ -36,3 +36,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
 <script src="js/editor.js"></script>
 <script src="js/paiza-io.js"></script>
+<script type='text/javascript' src='js/paiza-io.js'></script>

@@ -3,9 +3,6 @@
 
 
 
-document.write("<script type='text/javascript' src='paiza-io.js'></script>");
-
-
 //set button
 const executeCodebtn = document.getElementById('exe');
 const resetCodebtn = document.getElementById('reset');

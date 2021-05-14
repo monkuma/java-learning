@@ -12,10 +12,10 @@
 <link rel="stylesheet" href="css/editor.css">
 
 <link type="text/css" rel="stylesheet"
-  href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+  href="https://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
 <script type="text/javascript"
-  src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript"
-  src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 
