@@ -24,7 +24,7 @@
 			type="text" name="name" placeholder="name" />
 
 		</label> Password<label> <input type="password" name="pass"
-			placeholder="Password" />
+			placeholder="Password" /><small>パスワードには最低 6文字を指定してください。</small>
 
 		</label> <input id="check-terms" type="checkbox" required><label
 			class="form-check-label" for="check-terms">私は<a href="TermsOfUseServlet">利用規約</a>の内容を確認した上で同意します。</label>

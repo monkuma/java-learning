@@ -36,7 +36,7 @@ async function main(input_code) {
 	const res = await postData(url, data);
 
 
-	const status_url = `http://api.paiza.io/runners/get_status?id=${res.id}&api_key=guest`;
+	const status_url = `https://api.paiza.io/runners/get_status?id=${res.id}&api_key=guest`;
 	const status_response = await getData(status_url);
 	console.log(status_url);
 

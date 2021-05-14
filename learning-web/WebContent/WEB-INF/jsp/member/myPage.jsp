@@ -26,7 +26,7 @@ request.setAttribute("pageName","MyPage");
 				<p class="card-text">Java Silver 対策講座です。</p>
 			</div>
 			<div class="card-link">
-				<a href="LectureServlet?lecNo=lecture01">About</a>
+				<a href="LectureServlet?lecture=lecture01">About</a>
 			</div>
 		</section>
 
