@@ -13,7 +13,7 @@ request.setAttribute("pageName","Java入門講座");
 <body>
 
 	<jsp:include page="./member_header.jsp" />
-	<jsp:include page="./${lecNo}/${pageNo}" />
+	<jsp:include page="./${lecture}/${pageNo}" />
 
 
 <jsp:include page="./Editor.jsp" />
