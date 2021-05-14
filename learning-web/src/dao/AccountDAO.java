@@ -73,8 +73,6 @@ public class AccountDAO {
 				String mail = rs.getString("mail");
 				account = new Account(name, pass, mail);
 
-				System.out.println("findByLogin成功");
-
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -135,5 +133,33 @@ public class AccountDAO {
 			closeConnection(conn);
 		}
 		return true;
+	}
+
+
+	//会員削除します
+	public boolean deleteAccount(String mail, String name) {
+		Connection conn = createConnection();
+
+		try {
+			System.out.println("deleteAccount実行");
+			String sql = "DELETE FROM account WHERE mail = ? AND name = ?";
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, mail);
+			pStmt.setString(2, name);
+
+			int rs = pStmt.executeUpdate();
+
+			if(rs != 0) {
+				return true;
+			}
+		}catch(SQLException e) {
+			System.out.println("deleteAccount　失敗");
+			e.printStackTrace();
+		}finally{
+			closeConnection(conn);
+		}
+		System.out.println("deleteAccount　失敗");
+		return false;
 	}
 }
