@@ -7,6 +7,7 @@ request.setAttribute("pageName","Java入門講座");
 <html>
 <head>
 
+
 <jsp:include page="../commonMeta.jsp" />
 <title>講座</title>
 </head>
