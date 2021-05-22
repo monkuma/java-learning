@@ -31,7 +31,7 @@ request.setAttribute("pageName","MyPage");
 		</section>
 
 		<section class="card">
-			<h1 class="card-title">Java 問題集</h1>
+			<h1 class="card-title">Java 問題集(準備中)</h1>
 
 			<div class="card-img">
 				<img class="mb-4" src="img/sticky_note_2_black_24dp.svg">
