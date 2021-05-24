@@ -40,8 +40,6 @@ public class LoginCheckFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-
-			System.out.println("LoginCheckFileter実行");
 			HttpSession session = ((HttpServletRequest)request).getSession(true);
 			String name = (String)session.getAttribute("name");
 
