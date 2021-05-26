@@ -88,7 +88,7 @@ public class AccountDAO {
 		Connection conn = createConnection();
 
 		try {
-			System.out.println("insertAccount実行");
+
 			System.out.println("name:  " + account.getName());
 			String sql = "INSERT INTO account (name, pass, mail) VALUES (?, ?, ?)";
 
