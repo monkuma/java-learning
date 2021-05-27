@@ -6,7 +6,7 @@
 
 	<nav class="pc-nav">
 		<ul>
-			<li><a href="#" class="page-title">${pageName}</a></li>
+			<li><a href="Main" class="page-title">${pageName}</a></li>
 
 			<li class="click-menubtn pub-btn"><a href="Main">ABOUT</a></li>
 			<li class="click-menubtn pub-btn"><a href="Main">SERVICE</a></li>
