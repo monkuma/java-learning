@@ -3,21 +3,27 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 import java.security.MessageDigest;
 import dao.AccountDAO;
+import dao.RegisterFormListDAO;
 
 
 public class RegisterLogic {
 	AccountDAO dao = new AccountDAO();
-	boolean hasBlank;
-	boolean MailisEnabled;
-	boolean PassGeSix;
+	private boolean hasBlank;
+	private boolean PassGeSix;
+	private boolean validMail;
 
 	public boolean execute(Account account) {
 
 		hasBlank = checkBlank(account);
-		MailisEnabled = checkMail(account);
+		validMail = validMail(account);
 		PassGeSix = checkTheLengthOfPass(account);
 
-		if(hasBlank && MailisEnabled && PassGeSix) {
+		AccountDAO accountDao = new AccountDAO();
+		boolean isEnabled = accountDao.registerCheck(account.getMail());
+		System.out.println(hasBlank + " " + validMail + " " + PassGeSix);
+
+
+		if(hasBlank && validMail && PassGeSix && isEnabled) {
 
 			try {
 				ResourceBundle rb = ResourceBundle.getBundle("db");
@@ -30,6 +36,7 @@ public class RegisterLogic {
 				account.setPass(hashPass);
 				boolean result = dao.insertAccount(account);
 				return result;
+
 			}catch(NoSuchAlgorithmException e) {
 				e.printStackTrace();
 			}
@@ -49,10 +56,12 @@ public class RegisterLogic {
 		}
 	}
 
-	//メールアドレスが使用済みでないか確認します
-	private boolean checkMail(Account account) {
-		MailisEnabled = dao.registerCheck(account.getMail());
-		return MailisEnabled;
+	//メールアドレス有効化確認します
+	private boolean validMail(Account account) {
+		RegisterFormListDAO dao = new RegisterFormListDAO();
+		validMail = dao.checkMail(account.getMail());
+
+		return validMail;
 	}
 
 	//Passが6文字以上でTrue
