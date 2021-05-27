@@ -89,7 +89,7 @@ public class AccountDAO {
 
 		try {
 
-			System.out.println("name:  " + account.getName());
+
 			String sql = "INSERT INTO account (name, pass, mail) VALUES (?, ?, ?)";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
