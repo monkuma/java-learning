@@ -9,7 +9,7 @@ request.setAttribute("pageName","Login");
 <head>
 
 <jsp:include page="../commonMeta.jsp" />
-<title>LoginForm</title>
+<title>Login Form</title>
 </head>
 <body>
 
@@ -26,9 +26,6 @@ request.setAttribute("pageName","Login");
 		</label>
 		<button class="form-button" type="submit"><i class="fas fa-unlock-alt"></i> Sign in</button>
 	</form>
-
-
-
 
 
 	<jsp:include page="./public_footer.jsp" />
