@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
-request.setAttribute("pageName","LearnJava");
+request.setAttribute("pageName","Learn Java");
 %>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ request.setAttribute("pageName","LearnJava");
 <jsp:include page="../commonMeta.jsp" />
   <meta name="description" content="JavaSilver試験対策ができるサイトです。" />
 
-	<title>LearnJava</title>
+	<title>Learn Java</title>
 </head>
 <body>
 
