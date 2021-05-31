@@ -5,7 +5,9 @@ body {
 	background-color: #ebf5fc;
 }
 
-
+.bold{
+	font-weight:bold;
+}
 
 body, p, input, select, textarea, button {
 	font-family: 'Montserrat', sans-serif;
