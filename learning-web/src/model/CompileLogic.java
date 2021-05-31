@@ -32,8 +32,6 @@ public class CompileLogic {
 			String input = "{\"clientId\": \"" + clientId + "\",\"clientSecret\":\"" + clientSecret + "\",\"script\":\"" + script +
 					"\",\"language\":\"" + language + "\",\"versionIndex\":\"" + versionIndex + "\"} ";
 
-			System.out.println(input);
-
 			OutputStream outputStream = connection.getOutputStream();
 			outputStream.write(input.getBytes());
 			outputStream.flush();
@@ -47,7 +45,7 @@ public class CompileLogic {
 					(connection.getInputStream())));
 
 			String output;
-			System.out.println("Output from JDoodle .... \n");
+
 			while ((output = bufferedReader.readLine()) != null) {
 
 				JSONObject json = new JSONObject(output);
