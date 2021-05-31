@@ -11,9 +11,9 @@ function sampleAjax(script) {
 		data    : request,        //リクエストJSON
 		async   : true,           //true:非同期(デフォルト), false:同期
 		success : function(data) {
-			var midashi = document.getElementById("result-area");
+			var result = document.getElementById("result-area");
 			console.log("Success");
-			midashi.innerText = data;
+			result.innerText = data;
 		},
 		error : function(XMLHttpRequest, textStatus, errorThrown) {
 			alert("リクエスト時になんらかのエラーが発生しました：" + textStatus +":\n" + errorThrown);
