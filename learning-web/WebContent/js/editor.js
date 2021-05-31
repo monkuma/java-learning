@@ -1,26 +1,25 @@
 
 'use strict'
-
-
-
 //set button
 const executeCodebtn = document.getElementById('exe');
 const resetCodebtn = document.getElementById('reset');
+const test = document.getElementsByName('test');
+
+let tes = document.getElementById("editor");
 
 
 //Setup Ace
 let codeEditor = ace.edit("editor");
 codeEditor.$blockScrolling = Infinity;
 
+
 const defaultCode = "public class Main {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(\"Default Code Hello!!\");\n\n\t} \n}";
 
 let editorLib = {
 	init(){
 
-
 		//theme
 		codeEditor.setTheme("ace/theme/monokai");
-
 
 		//Set language
 		codeEditor.getSession().setMode("ace/mode/java");
@@ -40,8 +39,10 @@ let editorLib = {
 executeCodebtn.addEventListener('click', () =>{
 	//Get input from the code editor
 	const userCode = codeEditor.getValue();
+	sampleAjax(userCode);
+	//main(userCode);
 
-	main(userCode);
+
 });
 
 resetCodebtn.addEventListener('click', () =>{
@@ -50,7 +51,5 @@ resetCodebtn.addEventListener('click', () =>{
 
 	console.log(defaultCode);
 });
-
-
 
 editorLib.init();
