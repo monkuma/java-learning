@@ -47,8 +47,6 @@ public class CompileServlet extends HttpServlet {
 			FormingScriptLogic bo_f = new FormingScriptLogic();
 			String script_f = bo_f.execute(script);
 
-			System.out.println(script_f);
-
 			CompileLogic bo = new CompileLogic();
 			String result = bo.execute(script_f);
 
