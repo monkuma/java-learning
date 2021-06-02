@@ -7,10 +7,10 @@
 
 ## 使用技術
 * さくらVPS
-* CentOS
-* Apache HTTP Server
-* Apache Tomcat
-* Java 
+* CentOS7
+* Apache HTTP Server 2.4.6
+* Apache Tomcat 9.0.45
+* Openjdk 1.8.0_292
 * Paiza.io API
 * Ace.js
 
