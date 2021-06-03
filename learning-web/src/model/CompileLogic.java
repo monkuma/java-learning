@@ -28,6 +28,7 @@ public class CompileLogic {
 			connection.setDoOutput(true);
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("Content-Type", "application/json");
+			connection.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:221.0) Gecko/20100101 Firefox/31.0"); // add this line to your code
 
 			String input = "{\"clientId\": \"" + clientId + "\",\"clientSecret\":\"" + clientSecret + "\",\"script\":\"" + script +
 					"\",\"language\":\"" + language + "\",\"versionIndex\":\"" + versionIndex + "\"} ";
@@ -37,7 +38,7 @@ public class CompileLogic {
 			outputStream.flush();
 
 			if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-				throw new RuntimeException("Please check your inputs : HTTP error code : "+ connection.getResponseCode());
+				throw new RuntimeException(input + "Please check your inputs : HTTP error code : "+ connection.getResponseCode());
 			}
 
 			BufferedReader bufferedReader;
@@ -51,7 +52,6 @@ public class CompileLogic {
 				JSONObject json = new JSONObject(output);
 				String resultScript = json.getString("output");
 				return resultScript;
-
 			}
 
 			connection.disconnect();
