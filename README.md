@@ -11,7 +11,7 @@
 * Apache HTTP Server 2.4.6
 * Apache Tomcat 9.0.45
 * Openjdk 1.8.0_292
-* Paiza.io API
+* Jdoodle API
 * Ace.js
 
 ## 機能
