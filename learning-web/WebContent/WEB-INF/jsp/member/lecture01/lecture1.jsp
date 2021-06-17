@@ -7,7 +7,7 @@
 
 		<div class="video-outer">
 			<div class="video-inner">
-				<video class="lecture-video" src="video/sample-video.mp4" controls
+				<video class="lecture-video" src="video/lecture01.mp4" controls
 					preload="metadata" controls controlslist="nodownload"
 					preload="metadata" disablePictureInPicture style="width: 100%;">
 				</video>
