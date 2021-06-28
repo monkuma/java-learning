@@ -33,6 +33,8 @@
 		</div>
 
 		<div class="result-outer">
+			<h2>参考資料</h2>
+			<p><a href="https://www.javadrive.jp/start/const/index7.html" target="_blank">Javaの予約語 - Let'sプログラミング</a></p>
 			<h2>変数とデータ型 ミニ問題集</h2>
 <pre><code onCopy="alert('コピペせずに頑張ろう♪'); return false;">
 //1.以下のコードの出力結果を求めよう！
